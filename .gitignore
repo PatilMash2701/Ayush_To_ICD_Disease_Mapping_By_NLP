@@ -42,17 +42,7 @@ node_modules/
 package-lock.json
 yarn.lock
 
-# Excel files
-*.xls
-*.xlsx
-*.xlsm
-*.xlsb
-
-# Specific files to ignore
-NATIONAL AYURVEDA MORBIDITY CODES (1).xls
-NATIONAL SIDDHA MORBIDITY CODES.xls
-NATIONAL UNANI MORBIDITY CODES.xls
-icd_with_synonyms_and_problems.xlsx
+# Excel files - intentionally left empty to allow pushing Excel files
 
 # Logs
 logs/

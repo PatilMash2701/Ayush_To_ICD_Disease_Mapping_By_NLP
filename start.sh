@@ -1,0 +1,2 @@
+#!/bin/bash
+exec gunicorn -k uvicorn.workers.UvicornWorker -w 4 -b :$PORT third:app
