@@ -32,9 +32,32 @@ def _concat_terms(row, cols):
 
 
 
-siddha_df = pd.read_excel('NATIONAL SIDDHA MORBIDITY CODES.xls')
-unani_df = pd.read_excel('NATIONAL UNANI MORBIDITY CODES.xls')
-ayurveda_df = pd.read_excel('NATIONAL AYURVEDA MORBIDITY CODES (1).xls')
+def read_excel_file(file_path):
+    try:
+        # First try with openpyxl (for .xlsx)
+        return pd.read_excel(file_path, engine='openpyxl')
+    except Exception as e:
+        try:
+            # Fall back to xlrd for .xls files
+            return pd.read_excel(file_path, engine='xlrd')
+        except Exception as e2:
+            print(f"Error reading {file_path}: {str(e2)}")
+            raise Exception(f"Failed to read {file_path}. Tried both openpyxl and xlrd engines.") from e2
+
+# Load the data files with error handling
+try:
+    print("Loading Siddha data...")
+    siddha_df = read_excel_file('NATIONAL SIDDHA MORBIDITY CODES.xls')
+    print("Loading Unani data...")
+    unani_df = read_excel_file('NATIONAL UNANI MORBIDITY CODES.xls')
+    print("Loading Ayurveda data...")
+    ayurveda_df = read_excel_file('NATIONAL AYURVEDA MORBIDITY CODES (1).xls')
+    print("Loading ICD-11 data...")
+    icd11_data = read_excel_file('icd_with_synonyms_and_problems.xlsx')
+    print("All data loaded successfully!")
+except Exception as e:
+    print(f"Critical error loading data files: {str(e)}")
+    raise
 
 
 
