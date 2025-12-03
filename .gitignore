@@ -1,0 +1,110 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+.DS_Store
+Thumbs.db
+
+# Node modules
+node_modules/
+package-lock.json
+yarn.lock
+
+# Excel files
+*.xls
+*.xlsx
+*.xlsm
+*.xlsb
+
+# Specific files to ignore
+NATIONAL AYURVEDA MORBIDITY CODES (1).xls
+NATIONAL SIDDHA MORBIDITY CODES.xls
+NATIONAL UNANI MORBIDITY CODES.xls
+icd_with_synonyms_and_problems.xlsx
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Local development
+.DS_Store
+Thumbs.db
+
+# Hugging Face
+.huggingface/
+
+# Python cache
+.pytest_cache/
+.mypy_cache/
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Local development
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build files
+build/
+dist/
+*.egg-info/
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+*~
+*.swo
+
+# System Files
+.DS_Store
+Thumbs.db
